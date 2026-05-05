@@ -13,6 +13,7 @@
 Villages become **real economic endpoints**, and your Create factory becomes part of a living supply network.
 
 This mod is quite simple but extensively configurable. It only adds two blocks: the **Trade Terminal** and the **Depot Lectern**.
+
 ---
 
 ## ⚙️ Key Features
