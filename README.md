@@ -1,6 +1,6 @@
 # 📦 Create: Commerce
 
-> A physical, logistics-driven trade economy built for Create.
+> A physical village wholesale logistics trade economy built for Create.
 
 ---
 
@@ -12,7 +12,7 @@
 
 Villages become **real economic endpoints**, and your Create factory becomes part of a living supply network.
 
-This mod is quite simple but extensively configurable. It only adds two blocks: the **Trade Terminal** and the **Depot Lectern**.
+This mod is quite simple, yet extensively configurable. It only adds two blocks: the **Trade Terminal** and the **Depot Lectern**.
 
 ---
 
@@ -20,23 +20,39 @@ This mod is quite simple but extensively configurable. It only adds two blocks: 
 
 ### 🏪 Village Trade System
 - Every village has a **unique commerce profile**
-- Villages **accept specific goods** based on their type
+- Villages **accept specific goods** based on their village type
 - Fixed, configurable pricing
-- **Configurable daily caps** ensure anti-cheese and natural competition (or alliance) between players
+- **Configurable daily/weekly/whenever caps** ensure anti-cheese and natural competition (or alliance) between players
 
 ---
 
-### 📊 Trade Terminal
+### 📊 Block 1: Trade Terminal
 
 - View all linked villages
-- See demand, caps, and payouts
-- Distance indicators
-- Plan delivery routes
+- See eligible items, caps, and payouts
+- Village details and coordinates
 
 ---
 
-### 📚 Depot Lectern
+### 📚 Block 2: Depot Lectern
 
 - Accepts items from hoppers, belts, arms, or players
 - Converts goods into emeralds instantly
 - Fully automatable
+
+### 🗺️ Roadmap
+
+- Village orders (specific item requests for higher payouts)
+- Plan delivery routes in the Trade Terminal
+- Advanced compatibility with **Create: Aeronautics**
+
+### ❔ FAQ
+
+#### Will you port to...?
+- My objective is to polish 1.21.1 NeoForge before considering other versions. Anyone is welcome to port it however.
+
+#### Mod compatibility?
+- This mod automatically detects eligible items from other mods, adds a section into the config file, and assigns values to those items based on criteria. You can then configure those items or add new ones.
+
+#### What if I update a mod and new items are added?
+- The config won't update, you would have to remove the entire section for that mod, let it regenerate, then configure it again.
