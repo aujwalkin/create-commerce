@@ -21,7 +21,7 @@ This mod is quite simple, yet extensively configurable. It only adds two blocks:
 ### 🏪 Village Trade System
 - Every village has a **unique commerce profile**
 - Villages **accept specific goods** based on their village type
-- Fixed, configurable pricing
+- Fixed, configurable pricing using the **Create: Numismatics** _Spur_ currency
 - **Configurable daily/weekly/whenever caps** ensure anti-cheese and natural competition (or alliance) between players
 
 ---
@@ -36,8 +36,8 @@ This mod is quite simple, yet extensively configurable. It only adds two blocks:
 
 ### 📚 Block 2: Depot Lectern
 
-- Accepts items from hoppers, belts, arms, or players
-- Converts goods into emeralds instantly
+- Accepts items from the block UI, hoppers on the sides, or dropped into the top face
+- Converts goods into Spur instantly
 - Fully automatable
 
 ### 🗺️ Roadmap
