@@ -45,6 +45,7 @@ This mod is quite simple, yet extensively configurable. It only adds two blocks:
 - Village orders (specific item requests for higher payouts)
 - Plan delivery routes in the Trade Terminal
 - Advanced compatibility with **Create: Aeronautics**
+- Multipliers based on village population
 
 ### ❔ FAQ
 
