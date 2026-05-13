@@ -6,9 +6,9 @@
   "container.create_commerce.trade_terminal": "Trade Terminal",
 
   "create_commerce.ponder.depot_lectern.header": "Automating the Depot Lectern",
-  "create_commerce.ponder.depot_lectern.text_1": "The Depot Lectern accepts items defined by the village's profile and pays out the configured currency in return.",
+  "create_commerce.ponder.depot_lectern.text_1": "The Depot Lectern accepts items defined by the village's profile and pays out Spur in return.",
   "create_commerce.ponder.depot_lectern.text_2": "Hoppers and funnels can push items into the lectern from any side except the front.",
   "create_commerce.ponder.depot_lectern.text_3": "Items dropped onto the lectern from above are vacuumed in.",
-  "create_commerce.ponder.depot_lectern.text_4": "When a batch processes, the currency ejects from the front face.",
-  "create_commerce.ponder.depot_lectern.text_5": "If a Hopper or Chute sits directly below the lectern, emeralds route straight down into it instead of ejecting forward."
+  "create_commerce.ponder.depot_lectern.text_4": "When a batch processes, Spur ejects from the front face.",
+  "create_commerce.ponder.depot_lectern.text_5": "If a Hopper or Chute sits directly below the lectern, Spur routes straight down into it instead of ejecting forward."
 }
