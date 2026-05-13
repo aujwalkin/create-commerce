@@ -1,0 +1,13 @@
+{
+  "itemGroup.createcommerce": "Example Mod Tab",
+  "block.createcommerce.example_block": "Example Block",
+  "item.createcommerce.example_item": "Example Item",
+
+  "createcommerce.configuration.title": "Create: Commerce Configs",
+  "createcommerce.configuration.section.createcommerce.common.toml": "Create: Commerce Configs",
+  "createcommerce.configuration.section.createcommerce.common.toml.title": "Create: Commerce Configs",
+  "createcommerce.configuration.items": "Item List",
+  "createcommerce.configuration.logDirtBlock": "Log Dirt Block",
+  "createcommerce.configuration.magicNumberIntroduction": "Magic Number Text",
+  "createcommerce.configuration.magicNumber": "Magic Number"
+}

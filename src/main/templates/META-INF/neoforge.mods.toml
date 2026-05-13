@@ -1,0 +1,46 @@
+```toml
+modLoader    = "javafml"
+loaderVersion = "[4,)"
+license       = "LGPL-3.0"
+
+[[mods]]
+    modId       = "create_commerce"
+    version     = "${mod_version}"
+    displayName = "Create: Commerce"
+    description = '''
+        A logistics and trade economy addon for Create.
+        Deliver goods to village depots and earn Spur.
+    '''
+
+# Hard: NeoForge
+[[dependencies.create_commerce]]
+    modId        = "neoforge"
+    type         = "required"
+    versionRange = "[21.1.187,)"
+    ordering     = "NONE"
+    side         = "BOTH"
+
+# Hard: Minecraft
+[[dependencies.create_commerce]]
+    modId        = "minecraft"
+    type         = "required"
+    versionRange = "[1.21.1]"
+    ordering     = "NONE"
+    side         = "BOTH"
+
+# Hard: Create
+[[dependencies.create_commerce]]
+    modId        = "create"
+    type         = "required"
+    versionRange = "[6.0.6,)"
+    ordering     = "AFTER"
+    side         = "BOTH"
+
+# Hard: Create: Numismatics
+[[dependencies.create_commerce]]
+    modId        = "numismatics"
+    type         = "required"
+    versionRange = "[1.0.18,)"
+    ordering     = "AFTER"
+    side         = "BOTH"
+```

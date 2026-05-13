@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "RSR",
+    "SLS",
+    "RBR"
+  ],
+  "key": {
+    "R": { "item": "minecraft:redstone" },
+    "S": { "item": "create:brass_sheet" },
+    "L": { "item": "minecraft:lectern" },
+    "B": { "item": "create:brass_casing" }
+  },
+  "result": {
+    "id": "create_commerce:depot_lectern",
+    "count": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "create_commerce:block/depot_lectern" },
+    "facing=south": { "model": "create_commerce:block/depot_lectern", "y": 180 },
+    "facing=west":  { "model": "create_commerce:block/depot_lectern", "y": 270 },
+    "facing=east":  { "model": "create_commerce:block/depot_lectern", "y": 90  }
+  }
+}

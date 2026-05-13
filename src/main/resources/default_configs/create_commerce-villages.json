@@ -1,0 +1,467 @@
+{
+  "_comment_intro": [
+    "CREATE: COMMERCE — VILLAGE CONFIG",
+    "Controls which village commerce profiles exist and which villages use them.",
+    "",
+    "HOW PROFILES WORK:",
+    "  Each village is assigned one profile at world generation.",
+    "  The profile determines which item categories the depot accepts,",
+    "  which it accepts at a bonus rate, and which it refuses entirely.",
+    "",
+    "  'accepts'       : item tags or item IDs this village will buy.",
+    "  'bonus_accepts' : items bought at 1.5x the normal payout (village speciality).",
+    "  'refuses'       : items this village will NOT buy even if in a tag it accepts.",
+    "                    Use this to remove one item from a broad accepted tag.",
+    "",
+    "HOW TO ADD A CUSTOM PROFILE:",
+    "  1. Copy an existing profile block below.",
+    "  2. Give it a new unique name (lowercase, underscores only).",
+    "  3. Add it to the 'profile_weights' section with a weight value.",
+    "  4. It will be randomly assigned to villages at generation.",
+    "  Optionally, add its name to biome_overrides to force it in specific biomes.",
+    "",
+    "HOW TO FORCE A SPECIFIC VILLAGE TO USE A PROFILE:",
+    "  1. Find the village's UUID (shown in the Trade Terminal detail view,",
+    "     or enable debug.log_lectern_spawns in server.toml to see it in the log).",
+    "  2. Add the UUID and profile name to village_overrides below.",
+    "",
+    "ITEM TAG FORMAT:",
+    "  Use standard Minecraft tag IDs with a '#' prefix: '#minecraft:crops'",
+    "  Use full item IDs without '#' for specific items: 'minecraft:wheat'",
+    "  Modded items and tags work the same way: '#somefoodmod:foods'"
+  ],
+
+  "_comment_profile_weights": [
+    "How likely each profile is to be assigned to a new village.",
+    "Higher number = more common. All weights are relative to each other.",
+    "Example: farming_settlement at 30 and military_garrison at 5 means",
+    "farming settlements are 6x more common than garrisons.",
+    "Weights are only used when biome_overrides does not apply."
+  ],
+  "profile_weights": {
+    "farming_settlement": 30,
+    "frontier_outpost":   15,
+    "fishing_hamlet":     15,
+    "merchant_town":      10,
+    "mining_camp":        15,
+    "apothecary_village": 10,
+    "industrial_borough": 10,
+    "military_garrison":   5
+  },
+
+  "profiles": {
+
+    "farming_settlement": {
+      "display_name": "Farming Settlement",
+      "accepts": [
+        "#minecraft:crops",
+        "#c:crops",
+        "#c:seeds",
+        "#c:foods",
+        "#c:foods/bread",
+        "#c:tools/iron",
+        "minecraft:wheat",
+        "minecraft:carrot",
+        "minecraft:potato",
+        "minecraft:beetroot",
+        "minecraft:bread",
+        "minecraft:wheat_seeds",
+        "minecraft:beetroot_seeds",
+        "minecraft:pumpkin_seeds",
+        "minecraft:melon_seeds",
+        "minecraft:iron_hoe",
+        "minecraft:iron_axe",
+        "minecraft:iron_shovel",
+        "minecraft:pumpkin_pie",
+        "minecraft:baked_potato"
+      ],
+      "bonus_accepts": [
+        "#minecraft:crops",
+        "#c:crops",
+        "minecraft:wheat",
+        "minecraft:carrot",
+        "minecraft:potato",
+        "minecraft:beetroot"
+      ],
+      "refuses": [
+        "#c:weapons/swords",
+        "#c:armors",
+        "minecraft:emerald"
+      ],
+      "_comment": "Biome hint: plains, sunflower plains, meadow"
+    },
+
+    "frontier_outpost": {
+      "display_name": "Frontier Outpost",
+      "accepts": [
+        "#c:weapons",
+        "#c:weapons/swords",
+        "#c:bows",
+        "#c:arrows",
+        "#c:armors",
+        "#c:foods",
+        "#c:foods/cooked_meat",
+        "minecraft:iron_sword",
+        "minecraft:diamond_sword",
+        "minecraft:netherite_sword",
+        "minecraft:bow",
+        "minecraft:crossbow",
+        "minecraft:arrow",
+        "minecraft:iron_helmet",
+        "minecraft:iron_chestplate",
+        "minecraft:iron_leggings",
+        "minecraft:iron_boots",
+        "minecraft:diamond_helmet",
+        "minecraft:diamond_chestplate",
+        "minecraft:diamond_leggings",
+        "minecraft:diamond_boots",
+        "minecraft:netherite_helmet",
+        "minecraft:netherite_chestplate",
+        "minecraft:netherite_leggings",
+        "minecraft:netherite_boots",
+        "minecraft:cooked_beef",
+        "minecraft:cooked_porkchop",
+        "minecraft:cooked_chicken",
+        "minecraft:cooked_mutton",
+        "minecraft:cooked_rabbit",
+        "minecraft:shulker_shell",
+        "minecraft:echo_shard"
+      ],
+      "bonus_accepts": [
+        "#c:weapons/swords",
+        "#c:armors/iron",
+        "minecraft:iron_sword",
+        "minecraft:bow",
+        "minecraft:arrow"
+      ],
+      "refuses": [
+        "#minecraft:crops",
+        "#c:dyes",
+        "#c:flowers",
+        "minecraft:wheat",
+        "minecraft:carrot",
+        "minecraft:potato",
+        "minecraft:beetroot"
+      ],
+      "_comment": "Biome hint: windswept hills, jagged peaks, frozen peaks"
+    },
+
+    "fishing_hamlet": {
+      "display_name": "Fishing Hamlet",
+      "accepts": [
+        "#c:fishes",
+        "#c:foods/cooked_fish",
+        "minecraft:cod",
+        "minecraft:salmon",
+        "minecraft:tropical_fish",
+        "minecraft:pufferfish",
+        "minecraft:cooked_cod",
+        "minecraft:cooked_salmon",
+        "minecraft:bucket",
+        "minecraft:water_bucket",
+        "minecraft:fishing_rod",
+        "minecraft:string",
+        "minecraft:kelp",
+        "minecraft:dried_kelp",
+        "minecraft:nautilus_shell",
+        "minecraft:prismarine_shard",
+        "minecraft:prismarine_crystals",
+        "minecraft:scute",
+        "minecraft:ink_sac"
+      ],
+      "bonus_accepts": [
+        "minecraft:cod",
+        "minecraft:salmon",
+        "minecraft:cooked_cod",
+        "minecraft:cooked_salmon",
+        "minecraft:fishing_rod"
+      ],
+      "refuses": [
+        "#c:weapons/swords",
+        "#c:armors"
+      ],
+      "_comment": "Biome hint: beach, river, ocean"
+    },
+
+    "merchant_town": {
+      "display_name": "Merchant Town",
+      "accepts": [
+        "#c:ingots/gold",
+        "#c:gems/diamond",
+        "#c:foods/cake",
+        "#c:potions",
+        "minecraft:gold_ingot",
+        "minecraft:diamond",
+        "minecraft:golden_apple",
+        "minecraft:enchanted_golden_apple",
+        "minecraft:cake",
+        "minecraft:book",
+        "minecraft:bookshelf",
+        "minecraft:enchanted_book",
+        "minecraft:potion",
+        "minecraft:splash_potion",
+        "minecraft:lingering_potion",
+        "minecraft:experience_bottle",
+        "minecraft:totem_of_undying",
+        "minecraft:nether_star",
+        "minecraft:heart_of_the_sea",
+        "minecraft:dragon_breath",
+        "minecraft:chorus_fruit",
+        "minecraft:popped_chorus_fruit"
+      ],
+      "bonus_accepts": [
+        "#c:ingots/gold",
+        "minecraft:gold_ingot",
+        "minecraft:golden_apple",
+        "minecraft:enchanted_book",
+        "minecraft:totem_of_undying",
+        "minecraft:nether_star"
+      ],
+      "refuses": [
+        "#minecraft:crops",
+        "#c:raw_materials"
+      ],
+      "_comment": "Biome hint: any — generated more frequently near spawn"
+    },
+
+    "mining_camp": {
+      "display_name": "Mining Camp",
+      "accepts": [
+        "#c:tools/pickaxes",
+        "#c:tools/shovels",
+        "#c:foods/cooked_meat",
+        "minecraft:iron_pickaxe",
+        "minecraft:diamond_pickaxe",
+        "minecraft:netherite_pickaxe",
+        "minecraft:iron_shovel",
+        "minecraft:diamond_shovel",
+        "minecraft:netherite_shovel",
+        "minecraft:lantern",
+        "minecraft:soul_lantern",
+        "minecraft:candle",
+        "minecraft:torch",
+        "minecraft:redstone_torch",
+        "minecraft:coal",
+        "minecraft:charcoal",
+        "minecraft:iron_ingot",
+        "minecraft:copper_ingot",
+        "minecraft:gold_ingot",
+        "minecraft:raw_iron",
+        "minecraft:raw_copper",
+        "minecraft:raw_gold",
+        "minecraft:redstone",
+        "minecraft:lapis_lazuli",
+        "minecraft:diamond",
+        "minecraft:quartz",
+        "minecraft:amethyst_shard",
+        "minecraft:glowstone_dust",
+        "minecraft:ancient_debris",
+        "minecraft:netherite_scrap",
+        "minecraft:netherite_ingot",
+        "minecraft:cooked_beef",
+        "minecraft:cooked_porkchop",
+        "minecraft:baked_potato"
+      ],
+      "bonus_accepts": [
+        "minecraft:iron_pickaxe",
+        "minecraft:diamond_pickaxe",
+        "minecraft:netherite_pickaxe",
+        "minecraft:lantern",
+        "minecraft:soul_lantern",
+        "minecraft:ancient_debris",
+        "minecraft:netherite_ingot"
+      ],
+      "refuses": [
+        "#c:flowers",
+        "#c:fishes",
+        "minecraft:cod",
+        "minecraft:salmon"
+      ],
+      "_comment": "Biome hint: mountains, dripstone caves (surface)"
+    },
+
+    "apothecary_village": {
+      "display_name": "Apothecary Village",
+      "accepts": [
+        "#c:potions",
+        "#c:splash_potions",
+        "#c:flowers",
+        "#c:mushrooms",
+        "minecraft:potion",
+        "minecraft:splash_potion",
+        "minecraft:lingering_potion",
+        "minecraft:honey_bottle",
+        "minecraft:honeycomb",
+        "minecraft:sugar",
+        "minecraft:dandelion",
+        "minecraft:poppy",
+        "minecraft:blue_orchid",
+        "minecraft:allium",
+        "minecraft:azure_bluet",
+        "minecraft:red_tulip",
+        "minecraft:orange_tulip",
+        "minecraft:white_tulip",
+        "minecraft:pink_tulip",
+        "minecraft:oxeye_daisy",
+        "minecraft:cornflower",
+        "minecraft:lily_of_the_valley",
+        "minecraft:torchflower",
+        "minecraft:pitcher_plant",
+        "minecraft:red_mushroom",
+        "minecraft:brown_mushroom",
+        "minecraft:ender_pearl",
+        "minecraft:blaze_rod",
+        "minecraft:blaze_powder",
+        "minecraft:ghast_tear",
+        "minecraft:magma_cream",
+        "minecraft:phantom_membrane",
+        "minecraft:rabbit_foot",
+        "minecraft:spider_eye",
+        "minecraft:fermented_spider_eye"
+      ],
+      "bonus_accepts": [
+        "#c:potions",
+        "minecraft:potion",
+        "minecraft:honey_bottle",
+        "minecraft:ghast_tear"
+      ],
+      "refuses": [
+        "#c:weapons/swords",
+        "#c:armors"
+      ],
+      "_comment": "Biome hint: mushroom fields, dark forest, swamp"
+    },
+
+    "industrial_borough": {
+      "display_name": "Industrial Borough",
+      "accepts": [
+        "#c:ingots/iron",
+        "#c:ingots/copper",
+        "#c:gears",
+        "#c:tools",
+        "minecraft:iron_ingot",
+        "minecraft:copper_ingot",
+        "minecraft:gold_ingot",
+        "minecraft:redstone",
+        "minecraft:redstone_torch",
+        "minecraft:piston",
+        "minecraft:sticky_piston",
+        "minecraft:observer",
+        "minecraft:hopper",
+        "minecraft:dispenser",
+        "minecraft:dropper",
+        "minecraft:repeater",
+        "minecraft:comparator",
+        "minecraft:coal",
+        "minecraft:charcoal",
+        "minecraft:iron_pickaxe",
+        "minecraft:iron_axe",
+        "minecraft:iron_shovel",
+        "minecraft:iron_hoe",
+        "minecraft:slime_ball",
+        "minecraft:rabbit_hide"
+      ],
+      "bonus_accepts": [
+        "#c:gears",
+        "#c:ingots/copper",
+        "minecraft:copper_ingot",
+        "minecraft:hopper"
+      ],
+      "refuses": [
+        "#c:flowers",
+        "#c:fishes",
+        "#minecraft:crops",
+        "minecraft:wheat",
+        "minecraft:carrot",
+        "minecraft:potato"
+      ],
+      "_comment": "Biome hint: none — rare, spawns in any biome"
+    },
+
+    "military_garrison": {
+      "display_name": "Military Garrison",
+      "accepts": [
+        "#c:weapons",
+        "#c:weapons/swords",
+        "#c:bows",
+        "#c:crossbows",
+        "#c:arrows",
+        "#c:armors",
+        "#c:foods",
+        "#c:foods/cooked_meat",
+        "minecraft:iron_sword",
+        "minecraft:diamond_sword",
+        "minecraft:netherite_sword",
+        "minecraft:bow",
+        "minecraft:crossbow",
+        "minecraft:arrow",
+        "minecraft:iron_helmet",
+        "minecraft:iron_chestplate",
+        "minecraft:iron_leggings",
+        "minecraft:iron_boots",
+        "minecraft:diamond_helmet",
+        "minecraft:diamond_chestplate",
+        "minecraft:diamond_leggings",
+        "minecraft:diamond_boots",
+        "minecraft:netherite_helmet",
+        "minecraft:netherite_chestplate",
+        "minecraft:netherite_leggings",
+        "minecraft:netherite_boots",
+        "minecraft:cooked_beef",
+        "minecraft:cooked_porkchop"
+      ],
+      "bonus_accepts": [
+        "#c:armors/iron",
+        "#c:weapons/swords",
+        "minecraft:iron_sword",
+        "minecraft:diamond_sword"
+      ],
+      "refuses": [
+        "#minecraft:crops",
+        "#c:flowers",
+        "#c:fishes",
+        "minecraft:wheat",
+        "minecraft:carrot",
+        "minecraft:potato"
+      ],
+      "_comment": "Biome hint: none — rare, always appears near world borders"
+    }
+
+  },
+
+  "_comment_biome_overrides": [
+    "Force villages in specific biomes to always use a given profile.",
+    "Uses standard biome IDs: 'minecraft:plains', 'minecraft:taiga', etc.",
+    "Modded biomes work the same way: 'byg:jacaranda_forest'",
+    "Set a biome's entry to null to let the weighted random system decide.",
+    "Only biomes listed here are affected — all others use weighted random."
+  ],
+  "biome_overrides": {
+    "minecraft:beach":           "fishing_hamlet",
+    "minecraft:river":           "fishing_hamlet",
+    "minecraft:ocean":           "fishing_hamlet",
+    "minecraft:deep_ocean":      "fishing_hamlet",
+    "minecraft:frozen_ocean":    "fishing_hamlet",
+    "minecraft:mushroom_fields": "apothecary_village",
+    "minecraft:swamp":           "apothecary_village",
+    "minecraft:mangrove_swamp":  "apothecary_village"
+  },
+
+  "_comment_village_overrides": [
+    "Force a specific village to always use a specific profile.",
+    "Find a village's UUID by linking it to your Trade Terminal —",
+    "it appears in the terminal's detail view for that village.",
+    "You can also enable debug.log_lectern_spawns in server.toml",
+    "and the UUID will be printed to the server log when the lectern spawns.",
+    "",
+    "FORMAT:",
+    "  'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx': 'profile_name'",
+    "",
+    "Replace the example datawith real UUIDs."
+  ],
+  "village_overrides": {
+    "_example_note": "Replace the entry below with a real UUID from your world",
+    "00000000-0000-0000-0000-000000000000": "military_garrison"
+  }
+
+}

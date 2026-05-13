@@ -48,6 +48,10 @@ This mod is quite simple, yet extensively configurable. It only adds two blocks:
 
 ### ❔ FAQ
 
+#### How do I adjust trades, values etc?
+
+- Configs will generate in the 'Create_Commerce' folder upon world load. Open the create_commerce-items.json in Notepad++, select 'View' > 'Fold All', then open up the  "item_overrides" tab. You will see all auto-detected eligible items sectioned by mod. You can edit values, and add or remove items from the list.
+
 #### Will you port to...?
 - My objective is to polish 1.21.1 NeoForge before considering other versions. Anyone is welcome to port it however.
 
@@ -55,4 +59,4 @@ This mod is quite simple, yet extensively configurable. It only adds two blocks:
 - This mod automatically detects eligible items from other mods, adds a section into the config file, and assigns values to those items based on criteria. You can then configure those items or add new ones.
 
 #### What if I update a mod and new items are added?
-- The config won't update, you would have to remove the entire section for that mod, let it regenerate, then configure it again.
+- The config won't update, you would have to manually add the items or remove the entire section for that mod, let it regenerate, then configure it again.
