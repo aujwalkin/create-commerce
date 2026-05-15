@@ -1,6 +1,6 @@
 # 📦 Create: Commerce
 
-> A physical village wholesale logistics trade economy built for Create.
+> A physical village-based wholesale logistics trade economy mod, built with Create automation in mind.
 
 ---
 
@@ -50,18 +50,22 @@ Villages become **real economic endpoints**, and your Create factory becomes par
 
 ### ❔ FAQ
 
+#### Can I...?
+
+- Do whatever you want with the mod, as long as it remains free & open source **(GPLv3 License)**
+
 #### How do I adjust trades, values, village types, etc?
 
-- Configs will generate in the 'Create_Commerce' folder upon world load. 
+- Configs will generate in the '**_Create_Commerce_**' folder upon world load. 
 
-- Open the create_commerce-items.json in Notepad++, select 'View' > 'Fold All', then open up the  "item_overrides" tab. You will see all auto-detected eligible items sectioned by mod. You can edit values, and add or remove items from the list.
+- Easiest way is to open the **_create_commerce-items.json_** in **Notepad++**, select '**_View_**' > '**_Fold All_**', then open up the  "**_item_overrides_**" tab. You will see all auto-detected eligible items sectioned by mod. You can edit values, and add or remove items from the list.
 
-- Village types can be fully configured in create_commerce-villages.json. You can add your own types, remove default ones, or edit any parameter.
+- Village types can be fully configured in **_create_commerce-villages.json_**. You can add your own types, remove default ones, or edit any parameter.
 
 
 
 #### Will you port to...?
-- My objective is to polish 1.21.1 NeoForge before considering other versions. Anyone is welcome to port it however.
+- My objective is to polish **1.21.1 NeoForge** before considering other versions.
 
 #### Mod compatibility?
 - This mod automatically detects eligible items from other mods, adds a section into the config file, and assigns values to those items based on criteria. You can then configure those items or add new ones.
