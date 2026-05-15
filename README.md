@@ -59,7 +59,6 @@ Villages become **real economic endpoints**, and your Create factory becomes par
 - Village orders/contracts (specific item requests for higher payouts)
 - Plan delivery routes in the Trade Terminal
 - Advanced compatibility with **Create: Aeronautics** and other addons
-- Change hard dependency on Numismatics to optional/recommended
 - Option to require the Trade Terminal be powered by SU from the bottom (enabled by default)
 
 ---
