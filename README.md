@@ -12,7 +12,7 @@
 
 Villages become **real economic endpoints**, and your Create factory becomes part of a living supply network.
 
-This mod is quite simple, yet extensively configurable. It only adds two blocks: the **Trade Terminal** and the **Depot Lectern**.
+**Create: Commerce** is designed first for modpack devs to configure values of bulk trade items, ie. _**an incentive to mass produce items in Create**_. You can configure all values of all items to fit your specific needs, but as time goes on I will try to ensure the default values are accurate enough for plug-and-play.
 
 ---
 
@@ -44,14 +44,21 @@ This mod is quite simple, yet extensively configurable. It only adds two blocks:
 
 - Village orders (specific item requests for higher payouts)
 - Plan delivery routes in the Trade Terminal
-- Advanced compatibility with **Create: Aeronautics**
-- Multipliers based on village population
+- Advanced compatibility with **Create: Aeronautics** and other addons
+- Change hard dependency on Numismatics to optional/recommended
+- Option to require the Trade Terminal be powered by SU from the bottom (enabled by default)
 
 ### ❔ FAQ
 
-#### How do I adjust trades, values etc?
+#### How do I adjust trades, values, village types, etc?
 
-- Configs will generate in the 'Create_Commerce' folder upon world load. Open the create_commerce-items.json in Notepad++, select 'View' > 'Fold All', then open up the  "item_overrides" tab. You will see all auto-detected eligible items sectioned by mod. You can edit values, and add or remove items from the list.
+- Configs will generate in the 'Create_Commerce' folder upon world load. 
+
+- Open the create_commerce-items.json in Notepad++, select 'View' > 'Fold All', then open up the  "item_overrides" tab. You will see all auto-detected eligible items sectioned by mod. You can edit values, and add or remove items from the list.
+
+- Village types can be fully configured in create_commerce-villages.json. You can add your own types, remove default ones, or edit any parameter.
+
+
 
 #### Will you port to...?
 - My objective is to polish 1.21.1 NeoForge before considering other versions. Anyone is welcome to port it however.
