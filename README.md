@@ -40,13 +40,29 @@ Villages become **real economic endpoints**, and your Create factory becomes par
 - Converts goods into Spur instantly
 - Fully automatable
 
+---
+
+### 📋 Dependencies
+
+#### Required:
+- **Neoforge** _21.1.187_ or higher
+- **Create** _6.0.6_ or higher
+- **Create: Numismatics** _1.0.18_ or higher
+
+#### Recommended:
+- **Areas** / **Random Village Names** for automatic village naming
+
+---
+
 ### 🗺️ Roadmap
 
-- Village orders (specific item requests for higher payouts)
+- Village orders/contracts (specific item requests for higher payouts)
 - Plan delivery routes in the Trade Terminal
 - Advanced compatibility with **Create: Aeronautics** and other addons
 - Change hard dependency on Numismatics to optional/recommended
 - Option to require the Trade Terminal be powered by SU from the bottom (enabled by default)
+
+---
 
 ### ❔ FAQ
 
