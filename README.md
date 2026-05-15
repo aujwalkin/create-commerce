@@ -71,4 +71,4 @@ Villages become **real economic endpoints**, and your Create factory becomes par
 - This mod automatically detects eligible items from other mods, adds a section into the config file, and assigns values to those items based on criteria. You can then configure those items or add new ones.
 
 #### What if I update a mod and new items are added?
-- The config won't update, you would have to manually add the items or remove the entire section for that mod, let it regenerate, then configure it again.
+- The config will automatically add any eligible items.
