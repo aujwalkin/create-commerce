@@ -41,7 +41,6 @@ public class CreateCommerce {
 
     public static final String MOD_ID = "create_commerce";
 
-    // The reset time in game ticks for each option
     private static final long TICK_MIDNIGHT = 18000L;
     private static final long TICK_DAWN = 0L;
     private static final long TICK_NOON = 6000L;
@@ -117,7 +116,6 @@ public class CreateCommerce {
                 return; // Skip other tick logic during warm-up
             }
 
-            // Check every 20 ticks
             ServerLevel overworld = event.getServer().overworld();
             long gameTime = overworld.getDayTime();
             long dayTime = gameTime % DAY_TICKS;
