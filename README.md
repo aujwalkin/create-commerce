@@ -21,8 +21,9 @@ Villages become **real economic endpoints**, and your Create factory becomes par
 ### 🏪 Village Trade System
 - Every village has a **unique commerce profile**
 - Villages **accept specific goods** based on their village type
-- Fixed, configurable pricing using the **Create: Numismatics** _Spur_ currency
-- **Configurable daily/weekly/whenever caps** ensure anti-cheese and natural competition (or alliance) between players
+- Fixed, configurable pricing using your desired currency item
+- Full support for **Create: Numismatics** _Spur_ currency
+- **Configurable caps** ensure anti-cheese and natural competition (or alliance) between players
 
 ---
 
@@ -37,7 +38,7 @@ Villages become **real economic endpoints**, and your Create factory becomes par
 ### 📚 Block 2: Depot Lectern
 
 - Accepts items from the block UI, hoppers on the sides, or dropped into the top face
-- Converts goods into Spur instantly
+- Converts goods into currency instantly
 - Fully automatable
 
 ---
@@ -47,9 +48,9 @@ Villages become **real economic endpoints**, and your Create factory becomes par
 #### Required:
 - **Neoforge** _21.1.187_ or higher
 - **Create** _6.0.6_ or higher
-- **Create: Numismatics** _1.0.18_ or higher
 
 #### Recommended:
+- **Create: Numismatics** _1.0.18_ or higher (Spur currency logic fully implemented)
 - **Areas** / **Random Village Names** for automatic village naming
 
 ---
@@ -67,7 +68,8 @@ Villages become **real economic endpoints**, and your Create factory becomes par
 
 #### Can I...?
 
-- Do whatever you want with the mod, as long as it remains free & open source **(GPLv3 License)**
+- Modify the mod to your desire, as long as it remains free & open source.
+- Include in Modrinth modpacks as a dependency
 
 #### How do I adjust trades, values, village types, etc?
 
@@ -86,4 +88,4 @@ Villages become **real economic endpoints**, and your Create factory becomes par
 - This mod automatically detects eligible items from other mods, adds a section into the config file, and assigns values to those items based on criteria. You can then configure those items or add new ones.
 
 #### What if I update a mod and new items are added?
-- The config will automatically add any eligible items.
+- The config should automatically add any eligible items. This is still in early development; back-up your configs.
